@@ -1,22 +1,28 @@
 @import url("https://fonts.googleapis.com/css?family=Rajdhani:500,700|Source+Sans+Pro:300,400,600");
+
 body {
   background-color: #f5f6f7;
   overflow: hidden;
 }
+
 body.darkness{
   background-color: #1D2124;
 }
+
 body.darkness .card {
   box-shadow: 5px 10px 18px rgba(0,0,0,.75) !important;
 }
+
 body.darkness .moon {
   color: #f5f6f7;
 }
+
 .card {
   box-shadow: 5px 10px 18px rgba(0,0,0,.25) !important;
   border-radius: 15px;
   margin: 0px auto;
 }
+
 .card-footer {
   background-color: #fff;
   color: #333;
@@ -29,12 +35,14 @@ body.darkness .moon {
   color: #fff;
   cursor: pointer;
 }
+
 .back-button:hover {
   background-color: #f56a6a;
   color: #fff;
   cursor: pointer;
   border-bottom-left-radius: 15px;
 }
+
 .copy-button:hover {
   background-color: #f56a6a;
   color: #fff;
