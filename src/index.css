@@ -43,6 +43,13 @@ body.darkness .moon {
   border-bottom-left-radius: 15px;
 }
 
+.disabled-button {
+  background-color: #e8e8e8;
+  color: #fff;
+  cursor: not-allowed;
+  border-bottom-left-radius: 15px;
+}
+
 .copy-button:hover {
   background-color: #f56a6a;
   color: #fff;

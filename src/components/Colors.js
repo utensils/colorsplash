@@ -4,15 +4,14 @@ import Random from '../utils/random';
 
 class Colors extends Component {
   state = {
-    color: ""
+    color: null
   }
 
   onGenerate = () => {
-    const color = Random.hex();
+    const newColor = Random.hex();
+    this.setState({ color: newColor });
 
-    this.setState({ color: color });
-
-    return color;
+    return { color: newColor };
   }
 
   style = () => {
@@ -21,7 +20,7 @@ class Colors extends Component {
 
   render() {
     return (
-      <Swatch onBack={(newState) => this.setState(newState)} onGenerate={this.onGenerate} style={this.style}>
+      <Swatch onBack={(newState) => this.setState(newState) } onGenerate={this.onGenerate} style={this.style}>
         <div className="content is-uppercase">
           {this.state.color}
         </div>

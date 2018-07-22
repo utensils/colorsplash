@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheck, faClipboard, faStepBackward, faSyncAlt } from '@fortawesome/free-solid-svg-icons'
 
 class Swatch extends Component {
   state = {
@@ -8,13 +10,19 @@ class Swatch extends Component {
     previous: [],
   }
 
+  backClasses = () => {
+    return this.state.previous.length === 0 ? "card-footer-item disabled-button" : "card-footer-item back-button";
+  }
+
   onBack = () => {
     var { previous } = this.state;
     const last = previous.pop();
 
-    this.props.onBack(last);
+    if (last) {
+      this.props.onBack(last);
 
-    this.setState({ current: last, previous: previous });
+      this.setState({ current: last, previous: previous });
+    }
   }
 
   onCopy = () => {
@@ -22,11 +30,12 @@ class Swatch extends Component {
 
     setTimeout(() => {
       this.setState({ copying: false });
-    }, 500);
+    }, 600);
   }
 
   onGenerate = () => {
     let { current, previous } = this.state;
+    console.log(this.state);
 
     if (current) {
       previous.push(current);
@@ -54,20 +63,20 @@ class Swatch extends Component {
           {this.props.children}
         </div>
         <footer className="card-footer">
-          <p className="card-footer-item back-button" onClick={this.onBack}>
+          <p className={this.backClasses()} onClick={this.onBack}>
           <span className="icon">
-            <i className="fas fa-step-backward"></i>
+            <FontAwesomeIcon icon={faStepBackward} />
           </span>
           </p>
           <p className="card-footer-item generate-button" onClick={this.onGenerate}>
             <span className="icon">
-              <i className="fas fa-sync-alt"></i>
+              <FontAwesomeIcon icon={faSyncAlt} />
             </span>
           </p>
           <CopyToClipboard text={this.copyedText()} onCopy={this.onCopy}>
             <p className="card-footer-item copy-button">
               <span className="icon">
-                <i className="fas fa-clipboard"></i>
+                <FontAwesomeIcon icon={this.state.copying ? faCheck : faClipboard} />
               </span>
             </p>
           </CopyToClipboard>
