@@ -1,18 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router } from 'react-router';
-import createHistory from 'history/createBrowserHistory'
+import { MemoryRouter } from 'react-router';
 import App from './App';
 import './index.css';
 import 'bulma/css/bulma.css'
 
-const history = createHistory();
-
 const renderApp = () => {
   ReactDOM.render(
-    <Router history={history}>
+    <MemoryRouter>
       <App />
-    </Router>,
+    </MemoryRouter>,
     document.getElementById('root'));
 }
 
