@@ -35,7 +35,6 @@ class Swatch extends Component {
 
   onGenerate = () => {
     let { current, previous } = this.state;
-    console.log(this.state);
 
     if (current) {
       previous.push(current);

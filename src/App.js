@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router';
+import { Link } from 'react-router-dom'
 import './App.css';
 
 import Colors from './components/Colors';
@@ -32,10 +33,22 @@ export default class App extends Component {
         </div>
         <div className="hero-body">
           <div className="container has-text-centered">
-            <Switch>
-              <Route exact path="/" component={Colors} />
-              <Route exact path="/gradient" component={Gradients} />
-            </Switch>
+            <div className="columns">
+              <div className="column is-half has-text-right">
+                <Link to="/">Color</Link>
+              </div>
+              <div className="column is-half has-text-left">
+                <Link to="/gradient">Gradient</Link>
+              </div>
+            </div>
+            <div className="columns">
+              <div className="column">
+                <Switch>
+                  <Route exact path="/" component={Colors} />
+                  <Route exact path="/gradient" component={Gradients} />
+                </Switch>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -20,7 +20,7 @@ class Colors extends Component {
 
   render() {
     return (
-      <Swatch onBack={(newState) => this.setState(newState) } onGenerate={this.onGenerate} style={this.style}>
+      <Swatch onBack={(newState) => this.setState(newState)} onGenerate={this.onGenerate} style={this.style}>
         <div className="content is-uppercase">
           {this.state.color}
         </div>
