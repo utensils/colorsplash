@@ -23,8 +23,7 @@ const Random = {
   },
 
   gradient: (n) => {
-    const multipler = Random.bool() ? 1 : -1;
-    const degrees = Random.int(180) * multipler;
+    const degrees = Random.int(360);
 
     let colors = [];
 

@@ -26,7 +26,7 @@ class Gradients extends Component {
     return (
       <Swatch onBack={(newState) => this.setState(newState)} onGenerate={this.onGenerate} style={this.style}>
         <div className="content is-uppercase">
-          {this.state.colors.join(" ▸ ")} <FontAwesomeIcon icon={faLocationArrow} transform={{rotate: this.state.degrees}} pull="right" />
+          {this.state.colors[0]} <FontAwesomeIcon color="grey" icon={faLocationArrow} size="xs" transform={{rotate: this.state.degrees - 45}} /> {this.state.colors[1]}
         </div>
       </Swatch>);
   }
