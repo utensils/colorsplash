@@ -6,14 +6,30 @@ import Random from '../utils/random';
 
 class Gradients extends Component {
   state = {
+    callback: null,
     colors: [],
     degrees: 0
+  }
+
+  compassTimeout = () => {
+    let newDegrees;
+    if (this.state.degrees === 360) {
+      newDegrees = 1;
+    } else {
+      newDegrees = this.state.degrees + 1;
+    }
+    const callback = setTimeout(this.compassTimeout, 100);
+    this.setState({ callback: callback, degrees: newDegrees });
   }
 
   onGenerate = () => {
     const { colors, degrees } = Random.gradient(2);
 
-    this.setState({ colors: colors, degrees: degrees });
+    clearTimeout(this.state.callback);
+
+    const callback = setTimeout(this.compassTimeout, 5000);
+
+    this.setState({ callback: callback, colors: colors, degrees: degrees });
 
     return { colors: colors, degrees: degrees };
   }
