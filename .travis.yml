@@ -1,0 +1,20 @@
+sudo: false # route your build to the container-based infrastructure for a faster build
+install: true
+language: node_js
+node_js:
+  - stable
+before_install:
+- npm i -g yarn
+- yarn --version
+before_script:
+  - yarn install
+script:
+  - yarn run build
+deploy:
+  provider: pages # https://docs.travis-ci.com/user/deployment/pages/
+  skip-cleanup: true
+  github-token: $GITHUB_API  # Set in the settings page of your repository, as a secure variable
+  keep-history: true
+  local-dir: ./build
+  on:
+    branch: master
