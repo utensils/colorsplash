@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLocationArrow } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLocationArrow } from '@fortawesome/free-solid-svg-icons';
 import Swatch from './Swatch';
 import Random from '../utils/random';
 
@@ -27,7 +27,7 @@ class Gradients extends Component {
 
     clearTimeout(this.state.callback);
 
-    const callback = setTimeout(this.compassTimeout, 5000);
+    const callback = setTimeout(this.compassTimeout, 15000);
 
     this.setState({ callback: callback, colors: colors, degrees: degrees });
 
@@ -38,11 +38,17 @@ class Gradients extends Component {
     return { background: "linear-gradient(" + this.state.degrees + "deg, " + this.state.colors.join(",") + ")" }
   }
 
+  componentWillUnmount = () => {
+    clearTimeout(this.state.callback);
+  }
+
   render() {
     return (
       <Swatch onBack={(newState) => this.setState(newState)} onGenerate={this.onGenerate} style={this.style}>
-        <div className="content is-uppercase">
-          {this.state.colors[0]} <FontAwesomeIcon color="grey" icon={faLocationArrow} size="xs" transform={{rotate: this.state.degrees - 45}} /> {this.state.colors[1]}
+        <div className="columns is-mobile is-gapless">
+          <div className="column is-uppercase">{this.state.colors[0]}</div>
+          <div className="column is-narrow"><FontAwesomeIcon color="grey" icon={faLocationArrow} size="xs" transform={{rotate: this.state.degrees - 45}} /></div>
+          <div className="column is-uppercase">{this.state.colors[1]}</div>
         </div>
       </Swatch>);
   }

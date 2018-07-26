@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { MemoryRouter } from 'react-router';
+import { MemoryRouter } from 'react-router'
 import App from './App';
 import './index.css';
 import 'bulma/css/bulma.css'
