@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faClipboard, faMoon, faStepBackward, faSyncAlt } from '@fortawesome/free-solid-svg-icons';
+import PropTypes from 'prop-types';
 
 class Swatch extends Component {
   state = {
@@ -45,7 +46,7 @@ class Swatch extends Component {
   }
 
   copyedText = () => {
-    const [ value ] = Object.values(this.props.style());
+    const [ value ] = Object.values(this.props.style);
     return value;
   }
 
@@ -64,7 +65,7 @@ class Swatch extends Component {
 
   render() {
     return (
-      <div className="card" style={this.props.style()}>
+      <div className="card" style={this.props.style}>
         <div className="card-content color-box">
           <FontAwesomeIcon className="moon" icon={faMoon} onClick={this.toggleDarkness} style={{cursor: "pointer"}} />
         </div>
@@ -94,5 +95,11 @@ class Swatch extends Component {
     );
   }
 }
+
+Swatch.propTypes = {
+  onBack: PropTypes.func,
+  onGenerate: PropTypes.func,
+  style: PropTypes.object
+};
 
 export default Swatch;

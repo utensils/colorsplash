@@ -18,7 +18,7 @@ class NavLink extends React.Component {
   }
 }
 
-NavLink.contextTypes = {
+NavLink.propTypes = {
   router: PropTypes.object
 };
 

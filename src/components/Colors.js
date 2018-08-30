@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Swatch from './Swatch';
-import Random from '../utils/random';
+import * as Random from '../utils/random';
 
 class Colors extends Component {
   state = {
@@ -14,13 +14,13 @@ class Colors extends Component {
     return { color: newColor };
   }
 
-  style = () => {
-    return { backgroundColor: this.state.color };
+  onBack = (newState) => {
+    this.setState(newState);
   }
 
   render() {
     return (
-      <Swatch onBack={(newState) => this.setState(newState)} onGenerate={this.onGenerate} style={this.style}>
+      <Swatch onBack={this.onBack} onGenerate={this.onGenerate} style={{backgroundColor: this.state.color}}>
         <div className="is-uppercase">
           {this.state.color}
         </div>
