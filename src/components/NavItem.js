@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 
 class NavLink extends React.Component {
   render() {
-
     var isActive = this.context.router.route.location.pathname === this.props.to;
     var className = isActive ? 'is-active' : '';
 
@@ -19,6 +18,10 @@ class NavLink extends React.Component {
 }
 
 NavLink.propTypes = {
+  router: PropTypes.object
+};
+
+NavLink.contextTypes = {
   router: PropTypes.object
 };
 
