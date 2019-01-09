@@ -1,6 +1,15 @@
 {
-  "main.css": "static/css/main.c8555381.css",
-  "main.css.map": "static/css/main.c8555381.css.map",
-  "main.js": "static/js/main.be8b540b.js",
-  "main.js.map": "static/js/main.be8b540b.js.map"
+  "main.css": "/colorsplash/static/css/main.df339c4d.chunk.css",
+  "main.js": "/colorsplash/static/js/main.1e5dbba4.chunk.js",
+  "main.js.map": "/colorsplash/static/js/main.1e5dbba4.chunk.js.map",
+  "static/css/1.5de9ad35.chunk.css": "/colorsplash/static/css/1.5de9ad35.chunk.css",
+  "static/js/1.cf2ecd9a.chunk.js": "/colorsplash/static/js/1.cf2ecd9a.chunk.js",
+  "static/js/1.cf2ecd9a.chunk.js.map": "/colorsplash/static/js/1.cf2ecd9a.chunk.js.map",
+  "runtime~main.js": "/colorsplash/static/js/runtime~main.75099a6b.js",
+  "runtime~main.js.map": "/colorsplash/static/js/runtime~main.75099a6b.js.map",
+  "static/css/main.df339c4d.chunk.css.map": "/colorsplash/static/css/main.df339c4d.chunk.css.map",
+  "static/css/1.5de9ad35.chunk.css.map": "/colorsplash/static/css/1.5de9ad35.chunk.css.map",
+  "index.html": "/colorsplash/index.html",
+  "precache-manifest.6ceae121c9ae28351970bb7999f666e8.js": "/colorsplash/precache-manifest.6ceae121c9ae28351970bb7999f666e8.js",
+  "service-worker.js": "/colorsplash/service-worker.js"
 }
