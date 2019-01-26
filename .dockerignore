@@ -1,0 +1,8 @@
+.git
+.gitignore
+.travis.yml
+Dockerfile
+README.md
+build
+hooks
+node_modules
