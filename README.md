@@ -2,18 +2,16 @@
 
 ## About
 ColorSplash generates random colors and gradients, that's it.
-It was built as a demonstration of [ReactJS](https://reactjs.org) and [Bulma CSS](https://bulma.io) technologies.
+It was built as a demonstration of [ReactJS](https://reactjs.org) and [Bulma CSS](https://bulma.io) technologies.  
 
 ## Running
 
-A simple Dockerfile has been included to build and run locally. The following will build and expose the app on
+A simple Docker image has been included to run locally. The following will run and expose the app on
 [http://localhost:8080/](http://localhost:8080/)
 
 ```shell
-docker build -t colorsplash .
-docker run -i -t -p 8080:8080 colorsplash
+docker run -i -t -p 8080:8080 utensils/colorsplash
 ```
-
 
 ## Contributing
 

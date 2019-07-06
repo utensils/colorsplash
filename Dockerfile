@@ -1,5 +1,5 @@
 # This is the build container.
-FROM node:11.6.0-alpine as build_container
+FROM node:12.6.0-alpine as build_container
 
 # Copy the assets into the build container.
 COPY ./ /colorsplash
@@ -14,7 +14,7 @@ RUN set -xe; \
     npm run build; 
 
 # This is the runtime image.
-FROM alpine:3.8
+FROM alpine:3.10
 
 # Build arguments.
 ARG VCS_REF
@@ -24,13 +24,14 @@ ARG LANG="en_US.UTF-8"
 
 # Labels / Metadata.
 LABEL maintainer="James Brink, brink.james@gmail.com" \
-    decription="Colorsplash" \
-    version="${VERSION}" \
-    org.label-schema.name="colorsplash" \
     org.label-schema.build-date="${BUILD_DATE}" \
+    org.label-schema.decription="Colorsplash" \
+    org.label-schema.name="colorsplash" \
+    org.label-schema.schema-version="1.0.0-rc1" \
     org.label-schema.vcs-ref="${VCS_REF}" \
     org.label-schema.vcs-url="https://github.com/utensils/colorsplash" \
-    org.label-schema.schema-version="1.0.0-rc1"
+    org.label-schema.vendor="Utensils" \
+    org.label-schema.version="${VERSION}"
 
 # Create our group & user.
 RUN set -xe; \

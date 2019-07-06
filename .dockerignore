@@ -1,8 +1,9 @@
 .git
 .gitignore
 .travis.yml
-Dockerfile
-README.md
 build
+Dockerfile
 hooks
+LICENSE
 node_modules
+README.md
