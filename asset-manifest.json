@@ -1,15 +1,17 @@
 {
-  "main.css": "/colorsplash/static/css/main.f53b94ee.chunk.css",
-  "main.js": "/colorsplash/static/js/main.bf0bb5ab.chunk.js",
-  "main.js.map": "/colorsplash/static/js/main.bf0bb5ab.chunk.js.map",
-  "static/css/1.c09e52ff.chunk.css": "/colorsplash/static/css/1.c09e52ff.chunk.css",
-  "static/js/1.f79edfdd.chunk.js": "/colorsplash/static/js/1.f79edfdd.chunk.js",
-  "static/js/1.f79edfdd.chunk.js.map": "/colorsplash/static/js/1.f79edfdd.chunk.js.map",
-  "runtime~main.js": "/colorsplash/static/js/runtime~main.75099a6b.js",
-  "runtime~main.js.map": "/colorsplash/static/js/runtime~main.75099a6b.js.map",
-  "static/css/main.f53b94ee.chunk.css.map": "/colorsplash/static/css/main.f53b94ee.chunk.css.map",
-  "static/css/1.c09e52ff.chunk.css.map": "/colorsplash/static/css/1.c09e52ff.chunk.css.map",
-  "index.html": "/colorsplash/index.html",
-  "precache-manifest.3254b3976ff848862d5aa1d93f88ca28.js": "/colorsplash/precache-manifest.3254b3976ff848862d5aa1d93f88ca28.js",
-  "service-worker.js": "/colorsplash/service-worker.js"
+  "files": {
+    "main.css": "/colorsplash/static/css/main.01dbed32.chunk.css",
+    "main.js": "/colorsplash/static/js/main.298cb1e1.chunk.js",
+    "main.js.map": "/colorsplash/static/js/main.298cb1e1.chunk.js.map",
+    "runtime~main.js": "/colorsplash/static/js/runtime~main.2a455c5a.js",
+    "runtime~main.js.map": "/colorsplash/static/js/runtime~main.2a455c5a.js.map",
+    "static/css/2.1ef35742.chunk.css": "/colorsplash/static/css/2.1ef35742.chunk.css",
+    "static/js/2.b0efd806.chunk.js": "/colorsplash/static/js/2.b0efd806.chunk.js",
+    "static/js/2.b0efd806.chunk.js.map": "/colorsplash/static/js/2.b0efd806.chunk.js.map",
+    "index.html": "/colorsplash/index.html",
+    "precache-manifest.f1dfeee699ae5c1dc8f2c5905fca85ba.js": "/colorsplash/precache-manifest.f1dfeee699ae5c1dc8f2c5905fca85ba.js",
+    "service-worker.js": "/colorsplash/service-worker.js",
+    "static/css/2.1ef35742.chunk.css.map": "/colorsplash/static/css/2.1ef35742.chunk.css.map",
+    "static/css/main.01dbed32.chunk.css.map": "/colorsplash/static/css/main.01dbed32.chunk.css.map"
+  }
 }
