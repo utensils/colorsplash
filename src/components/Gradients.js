@@ -3,11 +3,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationArrow } from '@fortawesome/free-solid-svg-icons';
 import Swatch from './Swatch';
 import * as Random from '../utils/random';
+import { Link } from 'react-router-dom';
 
 class Gradients extends Component {
   state = {
     callback: null,
-    colors: [],
+    colors: ['', ''],
     degrees: 0
   }
 
@@ -48,9 +49,17 @@ class Gradients extends Component {
     return (
       <Swatch onBack={this.onBack} onGenerate={this.onGenerate} style={bgStyle}>
         <div className="columns is-mobile is-gapless">
-          <div className="column is-uppercase">{this.state.colors[0]}</div>
+          <div className="column is-uppercase">
+            <Link to={`/colors/${this.state.colors[0].replace("#", "")}`}>
+              {this.state.colors[0]}
+            </Link>
+          </div>
           <div className="column is-narrow"><FontAwesomeIcon color="grey" icon={faLocationArrow} size="xs" transform={{rotate: this.state.degrees - 45}} /></div>
-          <div className="column is-uppercase">{this.state.colors[1]}</div>
+          <div className="column is-uppercase">
+            <Link to={`/colors/${this.state.colors[1].replace("#", "")}`}>
+              {this.state.colors[1]}
+            </Link>
+          </div>
         </div>
       </Swatch>);
   }

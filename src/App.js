@@ -1,40 +1,30 @@
-import React, { Component } from 'react';
-import { Route, Switch } from 'react-router';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import './App.css';
+import React from "react";
+import { Route, Switch } from "react-router-dom";
 
-import NavItem from './components/NavItem';
-import Colors from './components/Colors';
-import Gradients from './components/Gradients';
+// Layout
+import Nav from "./components/layout/nav.component";
+import Content from "./components/layout/content.component";
+import Footer from "./components/layout/footer.component";
 
-export default class App extends Component {
-  state = {
-    copied: false,
-  }
+// Pages
+import RandomColorPage from "./pages/random-color.page";
+import RandomGradientPage from "./pages/random-gradient.page";
+import ColorShowPage from "./pages/colors/show.page";
 
-  render() {
-    return (
-      <section className="hero is-fullheight">
-        <div className="hero-body">
-          <div className="container has-text-centered">
-            <div className="tabs is-medium is-centered">
-              <ul>
-                <NavItem to="/">Color</NavItem>
-                <NavItem to="/gradient">Gradient</NavItem>
-              </ul>
-            </div>
-            <Switch>
-              <Route exact path="/" component={Colors} />
-              <Route exact path="/gradient" component={Gradients} />
-            </Switch>
-            <div className="content is-size-7">
-              <p>Built with <a href="https://reactjs.org" rel="noopener noreferrer" target="_blank">ReactJS</a> and <a href="https://bulma.io" rel="noopener noreferrer" target="_blank">Bulma</a></p>
-              <p><a href="https://github.com/utensils/colorsplash">view source <FontAwesomeIcon icon={faGithub}/></a></p>
-            </div>
-          </div>
-        </div>
-      </section>
-    );
-  }
+function App() {
+  return (
+    <section className="hero is-fullheight is-default is-bold">
+      <Nav />
+      <Content>
+        <Switch>
+          <Route exact path="/" component={RandomColorPage} />
+          <Route exact path="/gradient" component={RandomGradientPage} />
+          <Route exact path="/colors/:id" component={ColorShowPage} />
+        </Switch>
+      </Content>
+      <Footer />
+    </section>
+  );
 }
+
+export default App;

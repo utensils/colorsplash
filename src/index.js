@@ -1,20 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { MemoryRouter } from 'react-router'
-import App from './App';
-import './index.css';
-import 'bulma/css/bulma.css'
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
+import App from "./App";
+import "./index.css";
+import "bulma/css/bulma.css";
 
 const renderApp = () => {
   ReactDOM.render(
-    <MemoryRouter>
+    <BrowserRouter>
       <App />
-    </MemoryRouter>,
-    document.getElementById('root'));
-}
+    </BrowserRouter>,
+    document.getElementById("root")
+  );
+};
 
 renderApp();
 
-if (module.hot && process.env.NODE_ENV !== 'production') {
-  module.hot.accept('./App', () => renderApp());
+if (module.hot && process.env.NODE_ENV !== "production") {
+  module.hot.accept("./App", () => renderApp());
 }
